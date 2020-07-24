@@ -15,8 +15,9 @@ var commentRoutes=require("./routes/comments");
 var campgroundRoutes=require("./routes/campgrounds");
 var indexRoutes=require("./routes/index");
 
+
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://szuli:Risss*9510@cluster0.9tpfv.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
